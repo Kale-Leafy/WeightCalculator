@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kornerboisgmail.weightcalculator"
+    package="com.kylelevydevgmail.weightcalculator"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,13 +17,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.kornerboisgmail.weightcalculator.CalculatorPage" >
+        <activity android:name="com.kylelevydevgmail.weightcalculator.CalculatorPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.kylelevydevgmail.weightcalculator.WeightSettingsPage"
+            android:label="@string/title_activity_weight_settings_page" />
 
         <meta-data
             android:name="android.support.VERSION"
@@ -34,7 +37,7 @@
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.kornerboisgmail.weightcalculator.com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.kylelevydevgmail.weightcalculator.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 

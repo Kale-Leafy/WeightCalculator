@@ -9,7 +9,7 @@
     <GridLayout
         android:id="@+id/layout"
         android:layout_width="352dp"
-        android:layout_height="479dp"
+        android:layout_height="232dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -152,4 +152,71 @@
             android:textSize="24sp" />
 
     </GridLayout>
+
+    <GridLayout
+        android:layout_width="352dp"
+        android:layout_height="287dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggleOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="ToggleButton" />
+
+        <ToggleButton
+            android:id="@+id/toggleSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:text="ToggleButton" />
+
+        <TextView
+            android:id="@+id/thirtyFiveValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:text="TextView" />
+
+    </GridLayout>
+
 </android.support.constraint.ConstraintLayout>

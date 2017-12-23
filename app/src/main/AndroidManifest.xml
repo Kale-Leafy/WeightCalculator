@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".WeightSettingsPage"
+            android:label="@string/title_activity_weight_settings_page"></activity>
     </application>
 
 </manifest>

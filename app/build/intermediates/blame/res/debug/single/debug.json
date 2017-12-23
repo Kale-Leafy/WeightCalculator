@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -732,6 +732,10 @@
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -862,6 +866,10 @@
     {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7479969729cead5269b3f207d9055a25\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_info_black_24dp.xml.flat",
+        "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1300,12 +1308,20 @@
         "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Kyle Levy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad3fa2c595ca2253086de45ae8fa846d\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync_black_24dp.xml.flat",
+        "source": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\src\\main\\res\\drawable\\ic_sync_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
