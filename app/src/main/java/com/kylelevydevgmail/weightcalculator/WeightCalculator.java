@@ -25,12 +25,21 @@ public class WeightCalculator {
         weightValues.put(45.0, 0);
 
         this.possible = calculate(trunc, toggles);
-
     }
 
     private boolean calculate(BigDecimal input, boolean[] toggles) {
 
         double[] weightValues = {45, 35, 25, 10, 5, 2.5};
+        int count = 0;
+        for(boolean value : toggles){
+            System.out.print(count + ": ");
+            if(value){
+                System.out.println("true");
+            } else {
+                System.out.println("false");
+            }
+            count++;
+        }
         //Do the rounding to nearest multiple of 5
         input = calculateWorkingValue(input);
 
@@ -48,7 +57,8 @@ public class WeightCalculator {
             }
         }
 
-        return (input.equals(new BigDecimal(0)));
+        System.out.println("This is input: " + input);
+        return (input.doubleValue() == 0);
     }
 
     //Rounds the input value to the nearest multiple of five
@@ -96,6 +106,9 @@ public class WeightCalculator {
         return weightValues.get(2.5);
     }
 
+    public boolean isPossible(){
+        return this.possible;
+    }
 
 
 }

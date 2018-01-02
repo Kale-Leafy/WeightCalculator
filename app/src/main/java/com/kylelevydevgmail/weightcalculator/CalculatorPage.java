@@ -20,6 +20,7 @@ public class CalculatorPage extends AppCompatActivity {
     private TextView tenVal;
     private TextView fiveVal;
     private TextView twoPointFiveVal;
+    private TextView errorMessage;
     private ToggleButton testToggle;
     private ToggleButton toggleOne;
     private ToggleButton toggleTwo;
@@ -43,7 +44,7 @@ public class CalculatorPage extends AppCompatActivity {
         tenVal = findViewById(R.id.tenValue);
         fiveVal = findViewById(R.id.fiveValue);
         twoPointFiveVal = findViewById(R.id.twoPointFiveValue);
-        //testToggle = findViewById(R.id.toggleButton);
+        errorMessage = findViewById(R.id.errorMessage);
 
         toggleOne = findViewById(R.id.toggleOne);
         toggleTwo = findViewById(R.id.toggleTwo);
@@ -51,20 +52,7 @@ public class CalculatorPage extends AppCompatActivity {
         toggleFour = findViewById(R.id.toggleFour);
         toggleFive = findViewById(R.id.toggleFive);
         toggleSix = findViewById(R.id.toggleSix);
-
-        /*testToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
-                    System.out.println("I'm toggled on");
-                }
-                if(!b){
-                    System.out.println("I'm toggled off");
-                }
-            }
-        });
-        */
-
+        toggleOne.setChecked(true);
 
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,17 +62,39 @@ public class CalculatorPage extends AppCompatActivity {
                 if(!numText.isEmpty()) {
                     double val = Double.parseDouble(numText);
 
-                    if(val > 0) {
+                    if(val >= 45.0) {
                         boolean[] toggles = {toggleOne.isChecked(), toggleTwo.isChecked(), toggleThree.isChecked(), toggleFour.isChecked(), toggleFive.isChecked(), toggleSix.isChecked()};
                         WeightCalculator weight = new WeightCalculator(val, toggles);
                         weightDisplay.setText(weightNum.getText());
                         weightNum.setText("");
-                        plateVal.setText("" + weight.getFortyFive());
-                        thirtyFiveVal.setText("" + weight.getThirtyFive());
-                        twentyFiveVal.setText("" + weight.getTwentyFive());
-                        tenVal.setText("" + weight.getTen());
-                        fiveVal.setText("" + weight.getFive());
-                        twoPointFiveVal.setText("" + weight.getTwoFive());
+                        if(weight.isPossible()) {
+                            errorMessage.setText("");
+                            plateVal.setText("" + weight.getFortyFive());
+                            thirtyFiveVal.setText("" + weight.getThirtyFive());
+                            twentyFiveVal.setText("" + weight.getTwentyFive());
+                            tenVal.setText("" + weight.getTen());
+                            fiveVal.setText("" + weight.getFive());
+                            twoPointFiveVal.setText("" + weight.getTwoFive());
+                        }
+                        else if(!weight.isPossible()){
+                            //TODO print out to the GUI that with the toggled weights, you cannot make that weight happen
+                            plateVal.setText("" + 0);
+                            thirtyFiveVal.setText("" + 0);
+                            twentyFiveVal.setText("" + 0);
+                            tenVal.setText("" + 0);
+                            fiveVal.setText("" + 0);
+                            twoPointFiveVal.setText("" + 0);
+                            errorMessage.setText("Weight not possible with toggled weights");
+                        }
+                    }else{
+                        //TODO print out to the GUI that the number is too low to calculate weight for.
+                        plateVal.setText("" + 0);
+                        thirtyFiveVal.setText("" + 0);
+                        twentyFiveVal.setText("" + 0);
+                        tenVal.setText("" + 0);
+                        fiveVal.setText("" + 0);
+                        twoPointFiveVal.setText("" + 0);
+                        errorMessage.setText("Weight entered is lower than the bar's weight alone");
                     }
                 }
 

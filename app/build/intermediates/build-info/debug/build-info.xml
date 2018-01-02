@@ -2,42 +2,38 @@
 <instant-run
     abi="x86"
     api-level="26"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="420dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1513996176719"
+    timestamp="1514052628271"
     token="-263799706048761898"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="312" />
+        duration="183" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="65" />
     <task
         name="instant-run-transform"
-        duration="39" />
+        duration="117" />
     <task
         name="verifier"
-        duration="13" />
+        duration="12" />
 
     <artifact
-        location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
+        location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1513993453447"
+        timestamp="1514049661972"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
@@ -68,15 +64,100 @@
         <artifact
             location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1513996176719"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1514051993026"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052138867"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052237942"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052237942\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052268144"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052268144\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052315966"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052315966\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052355696"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052355696\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052407967"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052407967\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052491122"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\builds\debug\1514052491122\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1514052628271"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Kyle Levy\git\WeightCalculator\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

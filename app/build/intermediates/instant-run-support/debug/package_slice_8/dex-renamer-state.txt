@@ -1,4 +1,4 @@
-#Thu Dec 21 21:23:48 CST 2017
+#Sat Dec 23 12:00:20 CST 2017
 base.0=C\:\\Users\\Kyle Levy\\git\\WeightCalculator\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\27
 path.0=classes.dex
 renamed.0=classes.dex

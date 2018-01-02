@@ -2,11 +2,12 @@
     <string name="app_name">WeightCalculator</string>
     <string name="enter_weight">Enter here</string>
     <string name="weight_label">Weight:</string>
-    <string name="plate">Forty-fives:</string>
-    <string name="twenty_five">Twenty-fives:</string>
-    <string name="tens_weight">Tens:</string>
-    <string name="five_weight">Fives:</string>
-    <string name="two_halves">Two-Point Fives:</string>
+    <string name="plate">45\'s:</string>
+    <string name="thirty_five">35\'s:</string>
+    <string name="twenty_five">25\'s:</string>
+    <string name="tens_weight">10\'s:</string>
+    <string name="five_weight">5\'s:</string>
+    <string name="two_halves">2.5\'s:</string>
     <string name="calculate">Calculate</string>
     <string name="title_activity_weight_settings_page">Settings</string>
 
