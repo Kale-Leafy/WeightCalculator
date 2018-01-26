@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -12,7 +11,9 @@ import android.widget.ToggleButton;
 public class CalculatorPage extends AppCompatActivity {
 
     private Button calcButton;
-    private EditText weightNum;
+    private EditText totalWeightBar;
+    private EditText barWeightBar;
+
     private TextView weightDisplay;
     private TextView plateVal;
     private TextView thirtyFiveVal;
@@ -20,7 +21,9 @@ public class CalculatorPage extends AppCompatActivity {
     private TextView tenVal;
     private TextView fiveVal;
     private TextView twoPointFiveVal;
+
     private TextView errorMessage;
+
     private ToggleButton testToggle;
     private ToggleButton toggleOne;
     private ToggleButton toggleTwo;
@@ -36,14 +39,18 @@ public class CalculatorPage extends AppCompatActivity {
         setContentView(R.layout.activity_calculator_page);
 
         calcButton = findViewById(R.id.calculateButton);
-        weightNum = findViewById(R.id.weight_bar);
+        totalWeightBar = findViewById(R.id.total_weight_bar);
+        barWeightBar = findViewById(R.id.bar_weight_bar);
+
         weightDisplay = findViewById(R.id.weightEntered);
+
         plateVal = findViewById(R.id.plateValue);
         thirtyFiveVal = findViewById(R.id.thirtyFiveValue);
         twentyFiveVal = findViewById(R.id.twentyFiveValue);
         tenVal = findViewById(R.id.tenValue);
         fiveVal = findViewById(R.id.fiveValue);
         twoPointFiveVal = findViewById(R.id.twoPointFiveValue);
+
         errorMessage = findViewById(R.id.errorMessage);
 
         toggleOne = findViewById(R.id.toggleOne);
@@ -57,16 +64,19 @@ public class CalculatorPage extends AppCompatActivity {
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String numText = weightNum.getText().toString();
+                String totalWeightText = totalWeightBar.getText().toString();
+                String barWeightText = barWeightBar.getText().toString();
 
-                if(!numText.isEmpty()) {
-                    double val = Double.parseDouble(numText);
 
-                    if(val >= 45.0) {
+                if(!totalWeightText.isEmpty() && !barWeightText.isEmpty()) {
+                    double val = Double.parseDouble(totalWeightText);
+                    double bar = Double.parseDouble(barWeightText);
+
+                    if(val >= 45.0 && bar >= 0 && val >= bar) {
                         boolean[] toggles = {toggleOne.isChecked(), toggleTwo.isChecked(), toggleThree.isChecked(), toggleFour.isChecked(), toggleFive.isChecked(), toggleSix.isChecked()};
-                        WeightCalculator weight = new WeightCalculator(val, toggles);
-                        weightDisplay.setText(weightNum.getText());
-                        weightNum.setText("");
+                        WeightCalculator weight = new WeightCalculator(val, bar, toggles);
+                        weightDisplay.setText(weight.getWorkingVal() + "lbs");
+                        totalWeightBar.setText("");
                         if(weight.isPossible()) {
                             errorMessage.setText("");
                             plateVal.setText("" + weight.getFortyFive());

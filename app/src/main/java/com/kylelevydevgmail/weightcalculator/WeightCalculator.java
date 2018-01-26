@@ -9,11 +9,13 @@ import java.util.HashMap;
 
 public class WeightCalculator {
     private HashMap<Double, Integer> weightValues;
+    private String workingVal;
     private boolean possible;
 
     //Constructor that truncates the weight(124.3721 --> 124.4)
-    public WeightCalculator(double inputWeight, boolean[] toggles) {
+    public WeightCalculator(double inputWeight, double barWeight, boolean[] toggles) {
         BigDecimal trunc = new BigDecimal(inputWeight);
+        BigDecimal bar = new BigDecimal(barWeight);
         trunc = trunc.setScale(1, RoundingMode.HALF_UP);
 
         weightValues = new HashMap<>();
@@ -24,27 +26,23 @@ public class WeightCalculator {
         weightValues.put(35.0, 0);
         weightValues.put(45.0, 0);
 
-        this.possible = calculate(trunc, toggles);
+        this.possible = calculate(trunc, bar, toggles);
     }
 
-    private boolean calculate(BigDecimal input, boolean[] toggles) {
+    //Calculates the
+    private boolean calculate(BigDecimal input, BigDecimal barWeight, boolean[] toggles) {
 
         double[] weightValues = {45, 35, 25, 10, 5, 2.5};
-        int count = 0;
-        for(boolean value : toggles){
-            System.out.print(count + ": ");
-            if(value){
-                System.out.println("true");
-            } else {
-                System.out.println("false");
-            }
-            count++;
-        }
+
         //Do the rounding to nearest multiple of 5
         input = calculateWorkingValue(input);
+        barWeight = calculateWorkingValue(barWeight);
+
+        //For display purposes
+        workingVal = input.toBigInteger().toString();
 
         //Subtract the bar from the weight
-        input = input.subtract(new BigDecimal(45));
+        input = input.subtract(barWeight);
 
         //Calculating the weight for one side of the bar
         input = input.divide(new BigDecimal(2));
@@ -57,7 +55,7 @@ public class WeightCalculator {
             }
         }
 
-        System.out.println("This is input: " + input);
+
         return (input.doubleValue() == 0);
     }
 
@@ -110,6 +108,9 @@ public class WeightCalculator {
         return this.possible;
     }
 
+    public String getWorkingVal() {
+        return workingVal;
+    }
 
 }
 

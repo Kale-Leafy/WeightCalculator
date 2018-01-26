@@ -9,48 +9,77 @@
     <GridLayout
         android:id="@+id/calculateGrid"
         android:layout_width="352dp"
-        android:layout_height="105dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleGrid"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/weight_label"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/weight_bar"
-            android:layout_width="262dp"
+            android:id="@+id/total_weight_bar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_column="2"
             android:layout_row="0"
             android:ems="10"
             android:hint="@string/enter_weight"
-            android:inputType="number" />
+            android:inputType="numberDecimal"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/bar_options"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Bar Weight:"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/calculateButton"
-            android:layout_width="204dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
-            android:layout_row="1"
+            android:layout_row="3"
             android:text="@string/calculate"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="243dp"
+            tools:layout_editor_absoluteY="126dp" />
 
         <TextView
             android:id="@+id/weightEntered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
+            android:layout_row="2"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/bar_weight_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
             android:layout_row="1"
+            android:ems="10"
+            android:hint="@string/enter_weight"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="157dp"
+            android:layout_height="32dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="@string/total_weight"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
 
@@ -59,12 +88,13 @@
     <GridLayout
         android:id="@+id/toggleGrid"
         android:layout_width="352dp"
-        android:layout_height="287dp"
-        android:layout_marginBottom="170dp"
+        android:layout_height="290dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/errorMessage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <ToggleButton
@@ -72,7 +102,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="ToggleButton" />
+            android:text="ToggleButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="249dp" />
 
         <ToggleButton
             android:id="@+id/toggleTwo"
@@ -225,14 +258,14 @@
     <TextView
         android:id="@+id/errorMessage"
         android:layout_width="350dp"
-        android:layout_height="142dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleGrid" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
