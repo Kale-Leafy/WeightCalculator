@@ -148,10 +148,16 @@ public class CalculatorPage extends AppCompatActivity {
                         errorMessage.setText("Weight entered is lower than the bar's weight alone");
                     }
 
-                } else if(!barWeightText.isEmpty() && (!plateVal.getText().equals("") || !thirtyFiveVal.getText().equals("") || !twentyFiveVal.getText().equals("")
-                        || !tenVal.getText().equals("") || !fiveVal.getText().equals("") || !twoPointFiveVal.getText().equals(""))){ //If there is a weight supplied for the bar, and at least one of the weight plates has a number, it'll calculate that weight combo
-                    double weightPlateTotal = 2 * ((45 * Double.parseDouble(plateVal.getText().toString())) + (35 * Double.parseDouble(thirtyFiveVal.getText().toString())) + (25 * Double.parseDouble(twentyFiveVal.getText().toString()))
-                            + (10 * Double.parseDouble(tenVal.getText().toString())) + (5 * Double.parseDouble(fiveVal.getText().toString())) + (2.5 * Double.parseDouble(twoPointFiveVal.getText().toString())));
+                } else if(!barWeightText.isEmpty() && (!plateVal.getText().equals("") || !thirtyFiveVal.getText().equals("") || !twentyFiveVal.getText().equals("") || !tenVal.getText().equals("") || !fiveVal.getText().equals("") || !twoPointFiveVal.getText().equals(""))){ //If there is a weight supplied for the bar, and at least one of the weight plates has a number, it'll calculate that weight combo
+                   double weightPlateTotal = 0;
+                   weightPlateTotal += runningTotal(45, plateVal.getText().toString());
+                    weightPlateTotal += runningTotal(35, thirtyFiveVal.getText().toString());
+                    weightPlateTotal += runningTotal(25, twentyFiveVal.getText().toString());
+                    weightPlateTotal += runningTotal(10, tenVal.getText().toString());
+                    weightPlateTotal += runningTotal(5, fiveVal.getText().toString());
+                    weightPlateTotal += runningTotal(2.5, twoPointFiveVal.getText().toString());
+                    weightPlateTotal *= 2;
+
 
                     int trunc = Integer.parseInt(barWeightText) + (int)weightPlateTotal;
                     weightDisplay.setText(trunc + "lbs");
@@ -163,6 +169,13 @@ public class CalculatorPage extends AppCompatActivity {
 
     }
 
+    private double runningTotal(double multipier, String amount){
+        if(amount.equals("X") || amount.isEmpty()){
+            return 0;
+        }
+
+        return multipier * Double.parseDouble(amount);
+    }
     //If the Total Weight entry bar starts taking entry, clear the slate
     private class WeightChanged implements TextWatcher {
         @Override
