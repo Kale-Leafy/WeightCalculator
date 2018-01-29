@@ -113,12 +113,13 @@ public class CalculatorPage extends AppCompatActivity {
                     double val = Double.parseDouble(totalWeightText);
                     double bar = Double.parseDouble(barWeightText);
 
-                    if(val >= bar) {
+                    if(val >= bar && bar >=0) {
                         boolean[] toggles = {toggleOne.isChecked(), toggleTwo.isChecked(), toggleThree.isChecked(), toggleFour.isChecked(), toggleFive.isChecked(), toggleSix.isChecked()};
                         WeightCalculator weight = new WeightCalculator(val, bar, toggles);
                         totalWeightBar.setText("");
                         if(weight.isPossible()) {
                             errorMessage.setText("");
+
                             plateVal.setText("" + weight.getFortyFive());
                             thirtyFiveVal.setText("" + weight.getThirtyFive());
                             twentyFiveVal.setText("" + weight.getTwentyFive());

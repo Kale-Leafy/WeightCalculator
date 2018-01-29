@@ -32,7 +32,7 @@ public class WeightCalculator {
     //Calculates the
     private boolean calculate(BigDecimal input, BigDecimal barWeight, boolean[] toggles) {
 
-        double[] weightValues = {45, 35, 25, 10, 5, 2.5};
+        double[] weightNums = {45, 35, 25, 10, 5, 2.5};
 
         //Do the rounding to nearest multiple of 5
         input = calculateWorkingValue(input);
@@ -49,9 +49,11 @@ public class WeightCalculator {
 
         //Number of plates
 
-        for(int i = 0; i< weightValues.length; i++) {
+        for(int i = 0; i< weightNums.length; i++) {
             if(toggles[i]){
-                input = calculateRunningValue(input, new BigDecimal(weightValues[i]));
+                input = calculateRunningValue(input, new BigDecimal(weightNums[i]));
+            } else {
+                weightValues.put(weightNums[i], -1);
             }
         }
 
@@ -80,28 +82,54 @@ public class WeightCalculator {
         return input;
     }
 
-    public int getFortyFive(){
-        return weightValues.get(45.0);
+    //TODO Clean up this repetitive code
+
+    public String getFortyFive(){
+        if(weightValues.get(45.0) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(45.0);
+        }
     }
 
-    public int getThirtyFive(){
-        return weightValues.get(35.0);
+    public String getThirtyFive(){
+        if(weightValues.get(35.0) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(35.0);
+        }
     }
 
-    public int getTwentyFive() {
-        return weightValues.get(25.0);
+    public String getTwentyFive() {
+        if(weightValues.get(25.0) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(25.0);
+        }
     }
 
-    public int getTen() {
-        return weightValues.get(10.0);
+    public String getTen() {
+        if(weightValues.get(10.0) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(10.0);
+        }
     }
 
-    public int getFive() {
-        return weightValues.get(5.0);
+    public String getFive() {
+        if(weightValues.get(5.0) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(5.0);
+        }
     }
 
-    public int getTwoFive() {
-        return weightValues.get(2.5);
+    public String getTwoFive() {
+        if(weightValues.get(2.5) == -1){
+            return "X";
+        } else {
+            return "" + weightValues.get(2.5);
+        }
     }
 
     public boolean isPossible(){
