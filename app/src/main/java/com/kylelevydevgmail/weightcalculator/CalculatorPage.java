@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -24,7 +25,7 @@ public class CalculatorPage extends AppCompatActivity {
 
     private TextView errorMessage;
 
-    private ToggleButton testToggle;
+    private ToggleButton metaToggle;
     private ToggleButton toggleOne;
     private ToggleButton toggleTwo;
     private ToggleButton toggleThree;
@@ -53,13 +54,21 @@ public class CalculatorPage extends AppCompatActivity {
 
         errorMessage = findViewById(R.id.errorMessage);
 
+        metaToggle = findViewById(R.id.metaToggle);
         toggleOne = findViewById(R.id.toggleOne);
         toggleTwo = findViewById(R.id.toggleTwo);
         toggleThree = findViewById(R.id.toggleThree);
         toggleFour = findViewById(R.id.toggleFour);
         toggleFive = findViewById(R.id.toggleFive);
         toggleSix = findViewById(R.id.toggleSix);
-        toggleOne.setChecked(true);
+
+
+        metaToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+            }
+        });
 
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +106,6 @@ public class CalculatorPage extends AppCompatActivity {
                             errorMessage.setText("Weight not possible with toggled weights");
                         }
                     }else{
-                        //TODO print out to the GUI that the number is too low to calculate weight for.
                         plateVal.setText("" + 0);
                         thirtyFiveVal.setText("" + 0);
                         twentyFiveVal.setText("" + 0);
